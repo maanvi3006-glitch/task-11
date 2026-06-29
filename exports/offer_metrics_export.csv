@@ -1,0 +1,75 @@
+## FUNNEL_SUMMARY
+stage,event,count,pct_of_generated,pct_of_prev,drop_from_prev,drop_rate_pct
+Generated,offer_generated,500,100.0,100.0,0,0.0
+Sent,offer_sent,452,90.4,90.4,48,9.6
+Viewed,offer_opened,375,75.0,82.96,77,17.04
+Signed,offer_signed,243,48.6,64.8,132,35.2
+Rejected,offer_rejected,23,4.6,9.47,220,90.53
+
+## STAGE_DROPOFF
+transition,from_event,to_event,from_count,to_count,lost,loss_rate_pct,retention_pct
+Generated → Sent,offer_generated,offer_sent,500,452,48,9.6,90.4
+Sent → Viewed,offer_sent,offer_opened,452,375,77,17.04,82.96
+Viewed → Signed,offer_opened,offer_signed,375,243,132,35.2,64.8
+Viewed → Rejected,offer_opened,offer_rejected,375,23,352,93.87,6.13
+
+## COHORT_BY_WEEK
+week,generated,sent,viewed,signed,rejected,conversion_pct
+2026-W13,33,32,27,16,3,48.48
+2026-W14,28,26,23,15,3,53.57
+2026-W15,24,19,16,10,1,41.67
+2026-W16,34,31,26,21,1,61.76
+2026-W17,44,42,35,23,2,52.27
+2026-W18,47,45,38,24,3,51.06
+2026-W19,48,41,34,30,0,62.5
+2026-W20,45,41,34,24,1,53.33
+2026-W21,38,37,29,16,0,42.11
+2026-W22,44,40,33,18,3,40.91
+2026-W23,41,34,29,17,1,41.46
+2026-W24,47,41,33,17,2,36.17
+2026-W25,27,23,18,12,3,44.44
+
+## COHORT_BY_DEPARTMENT
+department,generated,sent,viewed,signed,rejected,conversion_pct
+Product,38,36,31,21,1,55.26
+Operations,50,47,38,27,0,54.0
+Legal,50,47,41,27,2,54.0
+Sales,59,55,45,31,6,52.54
+Engineering,40,38,33,21,1,52.5
+Data,49,45,36,24,1,48.98
+Marketing,59,50,41,28,1,47.46
+Finance,55,50,41,26,1,47.27
+Design,44,35,28,18,2,40.91
+HR,56,49,41,20,8,35.71
+
+## COHORT_BY_CHANNEL
+channel,generated,sent,viewed,signed,conversion_pct
+referral,104,94,80,55,52.88
+linkedin,106,96,79,55,51.89
+company_portal,84,79,66,39,46.43
+naukri,100,87,70,46,46.0
+internshala,106,96,80,48,45.28
+
+## PROVIDER_PERFORMANCE
+provider,total_signatures,verified,failed,success_rate_pct,avg_verify_latency_mins
+leegality,82,78,4,95.12,0.6
+digio,80,74,6,92.5,0.7
+docusign,81,74,7,91.36,0.6
+
+## REJECTION_BREAKDOWN
+reason,count,pct_of_rejections
+role_mismatch,6,26.09
+competing_offer,5,21.74
+compensation_low,5,21.74
+relocation_concern,4,17.39
+no_reason_given,3,13.04
+
+## TIME_TO_SIGN_DIST
+bucket,count
+< 1 hr,20
+1–4 hrs,83
+4–12 hrs,140
+12–24 hrs,0
+24–48 hrs,0
+> 48 hrs,0
+
